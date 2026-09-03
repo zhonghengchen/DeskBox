@@ -172,14 +172,15 @@ public sealed partial class GlanceWidgetViewModel : ObservableObject, IDisposabl
     public bool ShowDate => _settings.ShowDate;
     public bool ShowYear => _settings.ShowYear;
     public bool ShowWeekday => _settings.ShowWeekday;
-    public bool ShowCalendar => _settings.ShowCalendar && _availableWidth >= 300 && _availableHeight >= 280;
+    private bool IsStandaloneCalendar => Config.WidgetKind == WidgetKind.Calendar;
+    public bool ShowCalendar => (IsStandaloneCalendar || _settings.ShowCalendar) && _availableWidth >= 300 && _availableHeight >= 280;
     public bool ShowPhotoControls => _settings.ShowPhotoControls && HasCurrentImage;
     public bool IsForegroundVisible => ShowTime || ShowDate || ShowWeekday || ShowCalendar;
     public bool IsImmersiveLayout => _settings.Layout == GlanceLayoutMode.Immersive ||
         (_settings.Layout == GlanceLayoutMode.Calendar && !ShowCalendar);
     public bool IsCenteredLayout => _settings.Layout == GlanceLayoutMode.Centered;
     public bool IsEditorialLayout => _settings.Layout == GlanceLayoutMode.Editorial;
-    public bool IsCalendarLayout => _settings.Layout == GlanceLayoutMode.Calendar && ShowCalendar;
+    public bool IsCalendarLayout => (IsStandaloneCalendar || _settings.Layout == GlanceLayoutMode.Calendar) && ShowCalendar;
     public bool IsNonCalendarForeground => IsForegroundVisible && !IsCalendarLayout;
     public bool IsCompactCalendarPresentation =>
         IsCalendarLayout && GlanceCalendarLayoutCalculator.IsCompact(_availableHeight);
