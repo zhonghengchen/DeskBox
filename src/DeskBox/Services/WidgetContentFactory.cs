@@ -126,6 +126,19 @@ public sealed class WidgetContentFactory
             SettingsSectionTag: "GlanceSettings",
             ChromeCategory: WidgetChromeCategory.Display,
             DefaultChromeMode: WidgetChromeMode.Overlay)
+        ,new(
+            WidgetKind.Calendar,
+            "Calendar",
+            "\uE787",
+            WidgetContentStage.Implemented,
+            CanShowInCreateEntry: false,
+            WidgetContentAvailability.Available,
+            "WidgetContent.Calendar.StatusLabel",
+            "WidgetContent.Calendar.StatusDescription",
+            HasSettingsPage: true,
+            SettingsSectionTag: "GlanceSettings",
+            ChromeCategory: WidgetChromeCategory.Display,
+            DefaultChromeMode: WidgetChromeMode.Overlay)
     ];
 
     private static readonly IReadOnlyDictionary<WidgetKind, WidgetContentDescriptor> Descriptors =
@@ -267,6 +280,7 @@ public sealed class WidgetContentFactory
             new MusicWidgetContentProvider(),
             new WeatherWidgetContentProvider(),
             new GlanceWidgetContentProvider(),
+            new CalendarWidgetContentProvider(),
             new SearchWidgetContentProvider(),
             new PlaceholderWidgetContentProvider(WidgetKind.Tags),
             new PlaceholderWidgetContentProvider(WidgetKind.SystemMonitor)
