@@ -2409,6 +2409,8 @@
     ,"Glance.Instances.DeleteDescription": "只删除这个时光格子及其独立设置，其他时光格子不受影响。"
     ,"WidgetContent.Glance.StatusLabel": "时光"
     ,"WidgetContent.Glance.StatusDescription": "在桌面上一眼查看照片、时间与日期"
+    ,"WidgetContent.Calendar.StatusLabel": "已实现"
+    ,"WidgetContent.Calendar.StatusDescription": "独立月历、月份切换与传统历法信息"
     ,"Glance.Settings.Title": "时光"
     ,"Glance.Settings.Description": "用一张照片、时间和日期打造属于你的桌面一角"
     ,"Glance.Display.Title": "显示内容"

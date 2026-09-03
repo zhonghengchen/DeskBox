@@ -2409,6 +2409,8 @@
     ,"Glance.Instances.DeleteDescription": "Only this Glance widget and its independent settings will be deleted. Other Glance widgets are not affected."
     ,"WidgetContent.Glance.StatusLabel": "Glance"
     ,"WidgetContent.Glance.StatusDescription": "See your photo, time, and date at a glance"
+    ,"WidgetContent.Calendar.StatusLabel": "Implemented"
+    ,"WidgetContent.Calendar.StatusDescription": "Standalone monthly calendar with navigation and traditional calendar details"
     ,"Glance.Settings.Title": "Glance"
     ,"Glance.Settings.Description": "Create a calm desktop view with photos, time, and date"
     ,"Glance.Display.Title": "Display"
