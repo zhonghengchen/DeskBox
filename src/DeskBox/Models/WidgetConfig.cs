@@ -232,6 +232,9 @@ public enum WidgetKind
     /// <summary>Reserved for a future system monitor widget.</summary>
     SystemMonitor,
 
+    /// <summary>Built-in standalone calendar widget.</summary>
+    Calendar,
+
     /// <summary>Global search widget that provides unified file and content search.</summary>
     Search,
 
